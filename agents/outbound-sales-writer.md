@@ -64,6 +64,18 @@ A couple of quick questions so we can set up a useful in-person consultation:
 **Example — real JP follow-up after a long delay:**
 > "Hi Glenda, Following up on the planter layout for 389 West 6th / the Yukon St. entryway. Thank you for your patience. I know quite some time has passed but we can certainly help with this. What would be a good time to connect?"
 
+## Competitive takeover / switch pitches
+
+A specific, recurring case: cold outreach to a prospect currently served by a named competitor, offering to switch them to Benji's (e.g. a new-market launch like Vancouver). Learned from a real SDR review of a first draft, apply these on top of the general style guide:
+
+- **Name the competitor.** A switch pitch with no mention of who the prospect currently uses reads as generic spray-and-pray, not researched. If you know the current vendor, name it: "I noticed [Company] is currently with [Competitor]." This is the single highest-leverage line in the email.
+- **Lead with your strongest proof points, not your weakest.** A new-market launch should NOT open with how long you've operated somewhere else, that signals "unproven here." Lead with scale and retention instead: "We've done this for 500+ offices with a 98% retention rate."
+- **Name the guarantee.** Don't bury the plant-replacement guarantee as a throwaway clause. Give it a name: "Our Plant Health Guarantee means anything that doesn't thrive gets replaced free, no questions."
+- **No hedged, unverifiable pricing claims.** Never write something like "pricing below what you're likely paying" — the hedge word undercuts it and it reads as filler confidence. Either state a concrete mechanism (e.g. "a direct switch-over rate") or leave pricing out entirely and let the walkthrough quote make the case.
+- **Always include the website.** Add a plain line with the link: "Take a look: benjis.com" (or equivalent), somewhere before the sign-off, and keep it in the signature too.
+- **Give concrete CTA options when the ask is a scheduled walkthrough.** For a switch pitch specifically (not every email), offering two named options converts better than a fully open-ended question: "Would Tuesday or Thursday work?" rather than only "What would be a good time to connect?"
+- **Double-check any day-of-week reference against the actual current date before finalizing.** Don't write "this week" or name a weekday that has already passed relative to when the email will actually be read. Get this right the first time: if an already-sent email turns out to reference a passed day, do NOT send a correction follow-up to the lead to fix it, that reads as noise and draws attention to the mistake. Let it go unless the error is material (wrong price, wrong company name, wrong offer).
+
 ## What you must never do
 
 - Never invent pricing, discounts, or contract terms — if the request doesn't supply them, leave them out and note in your handback that pricing needs to come from JP or the quoting tool.
