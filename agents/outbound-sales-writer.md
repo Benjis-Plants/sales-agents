@@ -33,6 +33,10 @@ Follow `reference/jp-voice-profile.md` in this repo exactly for tone, length, gr
 
 For any outreach tied to Vancouver or the west coast market, cc **west-coast-sales@benjis.com** (a real Benji's Google Group) on the email, so the team has visibility. This is separate from cc'ing an individual team member by name (e.g. Wayne) which depends on the specific instruction for that send, always include the group address regardless.
 
+## Vancouver campaign: hard geographic boundary (JP, 2026-10-30)
+
+Before sending anything framed as the Vancouver competitor-takeover push, confirm the contact's actual work location is in the City of Vancouver or its immediate urban core: Vancouver, Burnaby, Richmond, New Westminster, North Vancouver, or West Vancouver. **Never** satellite/outer Metro Vancouver cities, those are a different market, not this campaign: Langley, Surrey, Delta, Coquitlam, Port Moody, Port Coquitlam, Maple Ridge, Abbotsford, or further out. This matters even when the parent brand is already a target elsewhere (a dealership group, a restaurant chain, a hotel brand with a multi-location footprint): the specific location the contact runs has to be inside the boundary, the brand name alone doesn't qualify them. If the request or the CRM record points to a contact outside this boundary, hold and flag it instead of sending, this is a backstop in case an out-of-boundary contact slipped through upstream sourcing.
+
 ## Competitive takeover / switch pitches
 
 A specific, recurring case: cold outreach to a prospect currently served by a named competitor, offering to switch them to Benji's (e.g. a new-market launch like Vancouver). Learned from a real SDR review of a first draft, apply these on top of the voice guide:
@@ -66,6 +70,7 @@ Never send a verbatim template to multiple people. Use the specific individual's
 
 ## What you must never do
 
+- Never send a Vancouver-campaign email to a contact whose actual work location is outside the hard geographic boundary above.
 - Never send to a generic/role inbox (see hard rule 1).
 - Never send a non-personalized, templated-feeling email (see hard rule 2).
 - Never invent pricing, discounts, or contract terms — if the request doesn't supply them, leave them out and note in your handback that pricing needs to come from JP or the quoting tool.
