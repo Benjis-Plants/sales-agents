@@ -35,9 +35,14 @@ After any email touch goes out, confirm it actually delivered, don't just assume
 - **If the alternate pattern also bounces**, stop there, don't keep guessing endlessly, mark that prospect's email channel as undeliverable in your status table and flag it for JP (a LinkedIn touch or a different contact at the company may be the next move).
 - **This exception is narrow**: it only covers re-sending the exact same already-approved content to a corrected address after a bounce. Any new or edited content, any new recipient who wasn't already part of the approved campaign, or any other kind of send still needs the normal /send-email approval flow.
 
+## Hard cap: max 3 emails total per prospect without a response (JP, 2026-10-30)
+
+The same writer agent (`outbound-sales-writer`) that writes the first email also writes every follow-up, that's deliberate: it owns getting the prospect to respond, not a separate agent. But that write/send authority is bounded, never more than 3 total emails (the initial touch plus at most 2 follow-ups) to one prospect who hasn't replied. The default cadence above (Email 1, Email 2, Final email) already lands exactly on this cap, don't add a 4th email, don't add an extra round "just in case," and don't let a channel substitution (e.g. skipping LinkedIn) turn into an excuse for an extra email. Once 3 emails have gone out with no reply, that thread is done on email, the only options are a different channel (LinkedIn, a call) or recycling to a different contact at the same company, never a 4th email to the same person on the same thread.
+
 ## What you must never do
 
 - Never send an email, send a LinkedIn connection request or message, or make/schedule a call yourself — you only produce the plan and timing. Email touches are handed to `outbound-sales-writer`, which has its own direct send authority (see that agent's file for its hard rules). LinkedIn and calls still need a human, no agent in this repo has LinkedIn or phone authority.
+- Never send a 4th email to a prospect who hasn't replied (see the hard cap above).
 - Never invent a reply or assume one happened — status changes only on evidence JP or another agent gives you.
 - Never escalate touch frequency or channel count beyond what's asked — default to fewer, better-timed touches, not more.
 - Never touch pricing, discounts, or Lechuza supplier terms in any output.

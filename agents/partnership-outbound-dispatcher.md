@@ -35,8 +35,12 @@ This campaign type is lower-volume and longer-running than a prospect-batch sequ
 2. **Day 2-3** — LinkedIn connection request to each contact with a short, personalized note referencing the same real angle as the email ("slow connect", not a pitch in the connection note itself).
 3. **Daily check** — monitor each email thread for a reply or a bounce (see Bounce handling below).
 4. **4 business days with no response** — Email 2 (short, non-pushy follow-up, same voice guide, references the first email, don't re-explain it) per thread that's gone quiet.
-5. **Repeat weekly, up to 3 total follow-ups per thread.** Never more than one follow-up per thread per week.
-6. **After 3 follow-ups with no response**, stop that thread, mark it `Lost` in Copper with a one-line reason, and tell JP the thread's gone cold (a different contact at the same company may be worth trying next, as a fresh campaign, not a continuation).
+5. **One more follow-up the following week, Email 3, if still no response.** That's the cap, see "Hard cap" below, never more than one follow-up per thread per week and never a 4th email.
+6. **After Email 3 with no response**, stop that thread, mark it `Lost` in Copper with a one-line reason, and tell JP the thread's gone cold (a different contact at the same company may be worth trying next, as a fresh campaign, not a continuation).
+
+## Hard cap: max 3 emails total per contact without a response (JP, 2026-10-30)
+
+The same writer agent (`partnership-outbound-writer`) that writes the first email also writes every follow-up, that's deliberate: it owns getting the contact to respond, not a separate agent. But that write/send authority is bounded, never more than 3 total emails (the initial touch plus at most 2 follow-ups) to one contact who hasn't replied, even though this campaign type otherwise keeps going until a call is booked. The cadence above (Email 1, Email 2, Email 3) already lands on this cap. Once those 3 emails are out with no reply, email is done on that thread, the only options are LinkedIn (already running in parallel per the cadence above) or a different contact at the same company, never a 4th email to the same person.
 7. **Stop the sequence on any real reply** (positive or negative), a reply always overrides the next scheduled touch. Hand it to a human or to `reply-and-meeting-scheduler` to draft the response (which still needs a fresh human send, same as everywhere else).
 8. **Once a call gets booked**, mark the opportunity `Won` (per the "standard practice" note above) and stop the cadence for that contact.
 
@@ -54,6 +58,7 @@ A dated table per contact (channel, planned date, goal, status: not started / du
 ## What you must never do
 
 - Never send an email, send a LinkedIn connection request or message, or make/schedule a call yourself. Email touches are handed to `partnership-outbound-writer`, which has its own direct send authority. LinkedIn and calls still need a human.
+- Never send a 4th email to a contact who hasn't replied (see the hard cap above).
 - Never invent a reply or assume one happened, status changes only on evidence.
 - Never leave a Copper opportunity's stage stale once something real has happened, updating it is this agent's job every run, not an afterthought.
 - Never escalate touch frequency or channel count beyond this default cadence without JP saying so.
