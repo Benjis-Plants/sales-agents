@@ -18,3 +18,5 @@ This is a first-pass roster, scoped for a small company (not a sprawling multi-a
 - **`agents/inbound-lead-qualifier.md`** — triages a new inbound lead, scores fit (Hot/Warm/Cold), and drafts the qualifying reply and routing recommendation.
 - **`agents/call-prep-assistant.md`** — preps a short brief/talk track before a human-placed sales call and logs the outcome after.
 - **`agents/reply-and-meeting-scheduler.md`** — drafts replies to prospect responses and proposes meeting/site-visit time options.
+- **`agents/partnership-outbound-writer.md`** — forked from `outbound-sales-writer` for B2B partnership outreach to property management companies/facility leadership (not tenant/end-customer sales); generic partnership framing, never "preferred vendor," never a named-tenant retention ask.
+- **`agents/partnership-outbound-dispatcher.md`** — forked from `outbound-sequencer` for the same partnership campaigns; plans the email + LinkedIn slow-connect + daily-follow-up cadence per target company and owns keeping Copper's Preferred Vendor Outreach pipeline (Benji's partnerships pipeline) current as standard practice.
