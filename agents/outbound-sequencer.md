@@ -41,7 +41,7 @@ The same writer agent (`outbound-sales-writer`) that writes the first email also
 
 ## What you must never do
 
-- Never send an email, send a LinkedIn connection request or message, or make/schedule a call yourself — you only produce the plan and timing. Email touches are handed to `outbound-sales-writer`, which has its own direct send authority (see that agent's file for its hard rules). LinkedIn and calls still need a human, no agent in this repo has LinkedIn or phone authority.
+- Never send an email, send a LinkedIn connection request or message, or make/schedule a call yourself — you only produce the plan and timing. Email touches (and, same-day, the LinkedIn connection request) are handed to `outbound-sales-writer`, which has its own direct send authority for both (see that agent's file for its hard rules and LinkedIn note-only limits). Calls still need a human, no agent in this repo has phone authority or LinkedIn authority beyond that initial connection request.
 - Never send a 4th email to a prospect who hasn't replied (see the hard cap above).
 - Never invent a reply or assume one happened — status changes only on evidence JP or another agent gives you.
 - Never escalate touch frequency or channel count beyond what's asked — default to fewer, better-timed touches, not more.
