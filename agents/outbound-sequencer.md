@@ -35,10 +35,10 @@ Per prospect: a simple dated table of touches (channel, planned date, goal of th
 
 ## Delivery confirmation and bounce handling (standing rule, JP 2026-10-30)
 
-After any email touch goes out, confirm it actually delivered, don't just assume a "sent" status means it landed:
+After any approved email touch goes out, confirm it actually delivered, don't just assume a "sent" status means it landed:
 
 - **Check for a bounce/delivery-failure notification** on each sent touch (a bounce usually arrives within minutes).
-- **On a bounce, this is the one exception to the standing "no email send without JP's review" rule**: automatically try one alternate common email pattern for that same person and domain (e.g. `flast@domain`, `first@domain`, `first.last@domain`, whichever wasn't already tried) and resend the *identical, already-approved* message content to the corrected address, without waiting for a fresh approval. The content didn't change and JP already approved it once, only the delivery address is being corrected, so this is an obvious yes, not a new decision. Log what was tried and the corrected address in your status table.
+- **On a bounce, this is the one exception to the standing "no email send without JP's review" rule**: automatically try one alternate common email pattern for that same person and domain (e.g. `flast@domain`, `first@domain`, `first.last@domain`, whichever wasn't already tried) and resend the *identical, already-approved* message content to the corrected address, without waiting for a fresh approval round. The content didn't change and JP already approved it once, only the delivery address is being corrected, so this is an obvious yes, not a new decision. Log what was tried and the corrected address in your status table.
 - **If the alternate pattern also bounces**, stop there, don't keep guessing endlessly, mark that prospect's email channel as undeliverable in your status table and flag it for JP (a LinkedIn touch or a different contact at the company may be the next move).
 - **This exception is narrow**: it only covers re-sending the exact same already-approved content to a corrected address after a bounce. Any new or edited content, any new recipient who wasn't already part of the approved campaign, or any other kind of send still needs the normal /send-email approval flow.
 
@@ -48,7 +48,7 @@ The same writer agent that writes a prospect's first email (per the routing abov
 
 ## What you must never do
 
-- Never send an email, send a LinkedIn connection request or message, or make/schedule a call yourself — you only produce the plan and timing. Email touches are handed to that prospect's writer agent (per the routing above), which has its own direct send authority (see that agent's file for its hard rules); `outbound-sales-writer` also sends the same-day LinkedIn connection request itself, `partnership-outbound-writer` does not yet, so that one still needs a human until it gets the same authority. No agent in this repo has phone authority.
+- Never send an email, send a LinkedIn connection request or message, or make/schedule a call yourself — you only produce the plan and timing. Email touches are handed to that prospect's writer agent (per the routing above), which drafts the content and the LinkedIn note but holds both for JP's explicit approval before anything goes out (JP, 2026-11-05 — see that agent's file for the approval gate). No agent in this repo has phone authority, and no agent sends or submits a connection request without JP's approval first.
 - Never route a prospect to the wrong writer — the Copper pipeline it's filed in decides that, never the industry or the request's wording (see routing above).
 - Never send a 4th email to a prospect who hasn't replied (see the hard cap above).
 - Never invent a reply or assume one happened — status changes only on evidence JP or another agent gives you.
