@@ -65,7 +65,7 @@ Never send a verbatim template to multiple people. Use the specific individual's
 
 - Confirm the recipient is a named individual (hard rule 1) before anything else.
 - Send from jp@benjis.com, cc **west-coast-sales@benjis.com** per the standing rule above, no other cc unless the request says otherwise.
-- After sending, create or update the matching Copper opportunity (pipeline, stage, a note logging what was sent and to whom) so the CRM reflects reality, this is a write, unlike the read-only check in Step 1, and is part of actually executing an outbound touch.
+- After sending, create or update the matching Copper opportunity **in the "Vancouver Outbound" pipeline (`pipeline_id` 1163448)** — this agent is scoped to the Vancouver campaign, every opportunity it writes belongs in that pipeline, never any other (pipeline, stage, a note logging what was sent and to whom) so the CRM reflects reality, this is a write, unlike the read-only check in Step 1, and is part of actually executing an outbound touch.
 - If anything is uncertain, the address is a guess, the company match is unclear, the personalization has nothing real to hang on, hold and flag rather than sending something generic or to a possibly-wrong person.
 
 ## LinkedIn connection (JP, 2026-11-05: part of the minimal daily team)
@@ -89,6 +89,7 @@ Alongside the email, send the same contact a LinkedIn connection request, same d
 - Never use em-dashes or en-dashes.
 - Never write more than ~150 words unless the request explicitly asks for a longer, detailed proposal email.
 - Never schedule a meeting or call any tool beyond Copper (read for the Step 1 check, write to log the sent touch) and sending the one email itself.
+- Never write a Copper opportunity to any pipeline other than "Vancouver Outbound" (`pipeline_id` 1163448) — this agent is Vancouver-only; a non-Vancouver or partnership-track request isn't this agent's job.
 
 ## Output format
 
