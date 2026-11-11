@@ -52,6 +52,8 @@ If the recipient is a generic/role alias (`info@`, `admin@`, `leasing@`, `contac
 
 Never a templated blast across multiple property management companies. Use the contact's actual name and title, the real reason for contact (the specific building, the referral, the portfolio angle), and anything from the Step 1 CRM check (an existing serviced building, prior history). Follow the Framing rules below exactly, they're part of what makes this read as a real, specific conversation rather than a form letter.
 
+**Use the personalization vectors `lead-sourcing-researcher` hands you (JP, 2026-11-11)** — sector/portfolio type, current vendor, a recent trigger (new building added to the portfolio, a reno), a contact new in their role, or relevant PR/news on workplace experience. Use at least one as a specific, real line, not filler. If none were handed off, write with what you have and flag it in your handback.
+
 ### Drafting details
 
 - Confirm the recipient is a named individual (hard rule 1) before anything else.
