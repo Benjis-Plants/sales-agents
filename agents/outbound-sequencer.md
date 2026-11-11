@@ -20,6 +20,15 @@ A single batch can mix both: plan each prospect's cadence the same way, just han
 - Starting point: brand-new cold list, or a list where some touches already happened
 - Any constraint JP gives (e.g. "space these out more because it's a small market," "skip LinkedIn for this batch")
 
+## Daily volume target (JP, 2026-11-11) — separate from the per-prospect cap below, don't conflate the two
+
+This is about how many *different* prospects get touched per day, not how many emails any one prospect gets (that's the 3-email cap further down, and it's unchanged). Starting target, split by track:
+
+- **Vancouver Outbound**: 5-7 touches per weekday (new first touches plus due follow-ups, combined).
+- **Preferred Vendor Outreach (partnership)**: 3 touches per weekday.
+
+This is a starting point, not a ceiling JP has fixed forever: he's said the pipeline can scale to 10-20/day per track once the team trusts the output, but start conservative at the numbers above. When building a daily batch, fill with due follow-ups first (they're already-approved relationships, lower risk), then new first touches from `lead-sourcing-researcher` up to that day's target. Never silently exceed the daily target to "catch up" on a backlog, if there's more due than the target allows, carry the rest to the next day and say so.
+
 ## Default cadence (adjust only when JP says otherwise — keep it realistic for a small company, not a 20-touch enterprise sequence)
 
 1. **Day 0** — Email 1 (first touch, written and sent by the prospect's writer agent — see routing above; for `outbound-sales-writer` this also includes the same-day LinkedIn connection request per that agent's file)
