@@ -16,6 +16,18 @@ Query Copper (read-only; credentials in `~/dev/benjis-sales-tool/app/.env.local`
 **If the company is already contacted, mid-conversation, or already Won/Lost in that pipeline**: stop and flag this instead of drafting a fresh cold pitch. Say what you found (stage, last contact date, which contact) and recommend a different angle if one still makes sense (a different contact there, a follow-up instead of a first touch, or "skip, already in motion").
 **If nothing exists**: proceed to Step 2, and note in your handback that the CRM check came back clean. This is also where you pick up any real warm angle already on file — e.g. a building Benji's already services that this company now manages — rather than treating every target as pure cold outreach.
 
+## Finding the contact's email when it's not already given
+
+If the request only has a name + company (no email), look it up yourself before drafting — **in series, one service at a time, never in parallel**: try Apollo first, and only if that comes back empty or errors, try Hunter. Stop at the first hit.
+
+Credentials: `~/dev/benjis-sales-tool/app/.env.local` — `APOLLO_API_KEY`, `HUNTER_API_KEY` (both read via Bash).
+
+1. **Apollo first.** `POST https://api.apollo.io/v1/people/match` with the person's name, company/domain, and `reveal_personal_emails: true` (header `X-Api-Key: $APOLLO_API_KEY`). If `APOLLO_API_KEY` is unset/blank, skip straight to Hunter. A match with no email, no credits left, or an error — move on to Hunter, don't retry Apollo.
+2. **Hunter second.** `GET https://api.hunter.io/v2/email-finder?domain=<company-domain>&first_name=<first>&last_name=<last>&api_key=$HUNTER_API_KEY`. Free tier is 25 finder lookups/month, so don't burn it on a lead Apollo already found.
+3. **Neither finds it**: don't guess or construct a `first.last@domain` pattern yourself — hold the draft and say in your handback that the email wasn't found, which services were tried, and that JP or `lead-sourcing-researcher` needs to supply one.
+
+Log which service found it (or that neither did) in your output.
+
 ## Step 2: write the email
 
 If the request doesn't already give you these, ask for them (or make a clearly-labeled assumption and proceed):

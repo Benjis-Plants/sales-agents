@@ -17,6 +17,18 @@ Before drafting anything, query Copper (read-only, via the same pattern used els
 - **If nothing exists**: proceed to Step 2, and note in your handback that the CRM check came back clean.
 - You only ever read Copper here (search/GET). Creating or updating Copper records (opportunities, notes, pipeline stage) is a separate step, handled by whoever runs the campaign (JP or the main session), not by this check.
 
+## Finding the contact's email when it's not already given
+
+If the request already has the contact's personal work email, skip this. If it only has a name + company (no email), look it up yourself before drafting — **in series, one service at a time, never in parallel**: try Apollo first, and only if that comes back empty or errors, try Hunter. Stop at the first hit.
+
+Credentials: `~/dev/benjis-sales-tool/app/.env.local` — `APOLLO_API_KEY`, `HUNTER_API_KEY` (both read via Bash).
+
+1. **Apollo first.** `POST https://api.apollo.io/v1/people/match` with the person's name, company/domain, and `reveal_personal_emails: true` (header `X-Api-Key: $APOLLO_API_KEY`). If `APOLLO_API_KEY` is unset/blank, skip straight to Hunter. A match with no email, no credits left, or an error — move on to Hunter, don't retry Apollo.
+2. **Hunter second.** `GET https://api.hunter.io/v2/email-finder?domain=<company-domain>&first_name=<first>&last_name=<last>&api_key=$HUNTER_API_KEY`. Free tier is 25 finder lookups/month, so don't burn it on a lead Apollo already found.
+3. **Neither finds it**: don't guess or construct a `first.last@domain` pattern yourself — hold the draft and say in your handback that the email wasn't found, which services were tried, and that JP or `lead-sourcing-researcher` needs to supply one.
+
+Log which service found it (or that neither did) in your output.
+
 ## Step 2: write the email
 
 If the request doesn't already give you these, ask for them (or make a clearly-labeled assumption and proceed):
